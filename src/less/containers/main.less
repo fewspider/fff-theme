@@ -1,0 +1,29 @@
+@import '../variables';
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: table;
+  width: 100%;
+  height: 100%;
+  background: @body-bg-color;
+}
+
+a {
+  color: @link-color;
+  &, &:hover, &:active, &:focus {
+    cursor: pointer;
+    text-decoration: none;
+  }
+  &:hover, &:active, &:focus {
+    color: @link-highlight-color;
+  }
+}
+
+a {
+
+
+}

@@ -1,0 +1,43 @@
+@import '../variables';
+
+.site-footer {
+  color: @footer-text-color;
+  background: @footer-bg-color;
+  display: table-row;
+  height: 1px;
+  font-size: 0px;
+
+  a, a:hover, a:active, a:focus {
+    color: @footer-text-color;
+    display: inline-block;
+  }
+
+  .container {
+    padding: 20px 0px;
+  }
+
+  .footer-col {
+
+    display: table-cell;
+    font-size: 25px;
+
+    &.rss {
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    &.social-media-list {
+      text-align: right;
+      vertical-align: middle;
+      width: 100%;
+      a {
+        margin: 0px 20px 0px 0px;
+
+        &:last-of-type {
+          margin: 0px 0px 0px 0px;
+        }
+      }
+    }
+  }
+
+}

@@ -1,42 +1,36 @@
 <footer class="site-footer">
-  <div class="wrapper">
-    <h2 class="footer-heading">
-      {{ site.title | escape }}
-    </h2>
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>
-            {% if site.author %}
-              {{ site.author | escape }}
-            {% else %}
-              {{ site.title | escape }}
-            {% endif %}
-            </li>
-          <li>
-            <a href="mailto:{{ site.email }}">
-              {{ site.email }}
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description | escape }}</p>
-      </div>
+  <div class="container">
+    <div class="footer-col rss">
+      <a class="animated" href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">
+        <i class="fa fa-rss" aria-hidden="true"></i>
+      </a>
+    </div>
+    <div class="footer-col social-media-list">
+      {% if site.email %}
+        <a class="animated" href="mailto:{{ site.email }}" target="_blank">
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+      {% if site.github_username %}
+        <a class="animated" href="https://github.com/{{ site.github_username }}" target="_blank">
+          <i class="fa fa-github" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+      {% if site.twitter_username %}
+        <a class="animated" href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+      {% if site.facebook_username %}
+        <a class="animated" href="https://facebook.com/{{ site.facebook_username }}" target="_blank">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+      {% if site.instagram_username %}
+        <a class="animated" href="https://instagram.com/{{ site.instagram_username }}" target="_blank">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+      {% endif %}
     </div>
   </div>
 </footer>
