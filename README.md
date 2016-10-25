@@ -1,21 +1,51 @@
-# minima
+# fff-theme
 
-*Minima is a one-size-fits-all Jekyll theme for writers*. It's Jekyll's default (and first) theme. It's what you get when you run `jekyll new`.
+It base on webpack, babel, yarn and some modern web develop tools.
+You can fork this repo to special your want design effect.
+Just add some package that I am usually to used, like powerful lib underscore, or picture preview plugin fancybox.
+If you want to add more package, you can visit [yarn](https://github.com/yarnpkg/yarn) to get more information.
 
-![minima theme preview](/screenshot.png)
+# Feature
+
+### style
+* bootstrap base style
+* font-awesome icon
+* animate.css support
+
+### minify
+* compress js, css, html file
+
+### syntactic sugar
+* less
+* es6
+
+# Demo
+
+[my personal blog](https://blog.fewspider.com)
+
+# Develop
+
+```
+# watch modify
+yarn run watch
+
+# build release
+yarn run build
+```
+
 
 ## Installation
 
 Add this line to your Jekyll site's Gemfile:
 
 ```ruby
-gem "minima"
+gem "fff-theme"
 ```
 
 And add this line to your Jekyll site:
 
 ```yaml
-theme: minima
+theme: fff-theme
 ```
 
 And then execute:
@@ -51,20 +81,7 @@ Google Analytics will only appear in production, i.e., `JEKYLL_ENV=production`
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/jekyll/minima. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Then add a `css/main.scss` file based on the following template, don't forget to include the frontmatter:
-
-```css
----
----
-
-@import "minima";
-```
+Bug reports and pull requests are welcome on GitHub at https://github.com/fewspider/fff-theme. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 You can choose to override the [`_includes/head.html `](_includes/head.html) file to specify a custom style path.
 
