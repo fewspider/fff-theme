@@ -59,7 +59,7 @@ module.exports = {
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader!autoprefixer-loader!less-loader')
       },
       {
-        test: /\.(eot|ttf|svg|png|jpg|gif|woff|woff2)$/,
+        test: /\.(eot|ttf|svg|png|jpg|gif|woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'url-loader?limit=100000000'
       }
     ]
