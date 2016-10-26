@@ -1,0 +1,46 @@
+---
+# You don't need to edit this file, it's empty on purpose.
+# Edit theme's home layout instead if you wanna make some changes
+# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+layout: default
+---
+<div class="home">
+  <ul class="post-list">
+    {% for post in paginator.posts %}
+      <li>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        <div class="post-banner">
+          <i class="fa fa-clock-o"></i>
+          <span class="post-meta">
+            {{ post.date | date: "%Y-%m-%d %H:%M:%S" }}
+          </span>
+        </div>
+        <div class="post-content-small">
+        {{ post.content | split: '<!-- more -->' | first }}
+          <div class="readmore">
+            <div class="pull-left">
+              <i class="fa fa-comment-o"></i>
+              <span>
+                <a href="{{ post.url }}#disqus_thread">0</a>
+              </span>
+            </div>
+            <div class="pull-right">
+              <a href="{{ post.url }}#more">
+                <span>Read More</span>
+                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="split-line"></div>
+      </li>
+    {% endfor %}
+  </ul>
+  {% include paginator.html %}
+  {% if jekyll.environment == "production" and site.disqus.shortname %}
+    <script id="dsq-count-scr" src="//{{ site.disqus.shortname }}.disqus.com/count.js" async></script>
+  {% endif %}
+</div>
