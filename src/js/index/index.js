@@ -6,5 +6,12 @@ $(()=> {
     $(e.currentTarget).toggleClass('pulse');
   });
 
-  $('.fancybox').fancybox();
+  $('.fancybox').fancybox({
+    scrolling: 'hidden',
+    helpers: {
+     overlay: {
+       locked: true
+     }
+    }
+  });
 });
