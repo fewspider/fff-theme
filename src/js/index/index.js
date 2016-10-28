@@ -1,10 +1,10 @@
 import styles from '../../less/index.less';
+require('fancybox')($);
 
 $(()=> {
-  console.log('launched');
-
   $('.site-footer a').hover((e)=> {
     $(e.currentTarget).toggleClass('pulse');
   });
 
+  $('.fancybox').fancybox();
 });

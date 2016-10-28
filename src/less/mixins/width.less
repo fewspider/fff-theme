@@ -1,0 +1,15 @@
+/*
+  generate width by class name,for example
+  .width-1: 1%;
+  .width-50: 50%;
+  .width-100: 100%;
+*/
+
+.generate-width(100);
+
+.generate-width(@n, @i: 1) when (@i =< @n) {
+  .width-@{i} {
+    width: (@i * 100% / @n);
+  }
+  .generate-width(@n, (@i + 1));
+}
